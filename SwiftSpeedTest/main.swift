@@ -8,5 +8,31 @@
 
 import Foundation
 
-print("Hello, World!")
 
+// MARK: メソッド呼び出し
+
+class SwiftClass {
+    func method() {
+    }
+}
+
+struct MTSwift: SpeedTest {
+    let obj = SwiftClass()
+    
+    func main() {
+        obj.method()
+    }
+}
+
+struct MTObjC: SpeedTest {
+    let obj = ObjCClass()
+    
+    func main() {
+        obj.method()
+    }
+}
+
+// MARK: メソッド呼び出し
+let defaultCnt = 1000000
+MTSwift().start(defaultCnt)
+MTObjC().start(defaultCnt)

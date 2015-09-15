@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A21293A31BA84347008CED6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21293A21BA84347008CED6F /* main.swift */; };
+		A21293AA1BA84395008CED6F /* SpeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21293A91BA84395008CED6F /* SpeedTest.swift */; settings = {ASSET_TAGS = (); }; };
+		A21293AE1BA84610008CED6F /* ObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A21293AD1BA84610008CED6F /* ObjCClass.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		A212939F1BA84347008CED6F /* SwiftSpeedTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftSpeedTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21293A21BA84347008CED6F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A21293A91BA84395008CED6F /* SpeedTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedTest.swift; sourceTree = "<group>"; };
+		A21293AB1BA8460F008CED6F /* SwiftSpeedTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSpeedTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		A21293AC1BA84610008CED6F /* ObjCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCClass.h; sourceTree = "<group>"; };
+		A21293AD1BA84610008CED6F /* ObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				A21293A21BA84347008CED6F /* main.swift */,
+				A21293A91BA84395008CED6F /* SpeedTest.swift */,
+				A21293AC1BA84610008CED6F /* ObjCClass.h */,
+				A21293AD1BA84610008CED6F /* ObjCClass.m */,
+				A21293AB1BA8460F008CED6F /* SwiftSpeedTest-Bridging-Header.h */,
 			);
 			path = SwiftSpeedTest;
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 		A21293971BA84347008CED6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = pebble8888;
 				TargetAttributes = {
@@ -119,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21293A31BA84347008CED6F /* main.swift in Sources */,
+				A21293AA1BA84395008CED6F /* SpeedTest.swift in Sources */,
+				A21293AE1BA84610008CED6F /* ObjCClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +219,21 @@
 		A21293A71BA84347008CED6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSpeedTest/SwiftSpeedTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A21293A81BA84347008CED6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSpeedTest/SwiftSpeedTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
